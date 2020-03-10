@@ -9,9 +9,15 @@
 	<script src="https://myCDN.com/prism@v1.x/plugins/autoloader/prism-autoloader.min.js"></script>
   -->
 
-
-  <section>
-  <pre>
+  <h1>Programming Basics: MATLAB</h1>
+  <p>You will find it useful to store your data in arrays and matrices. This
+will allow you to compute values, etc, and save you a lot of time. Matlab
+and Python are powerful tools for working with arrays and matrices.
+Gaining proficiency with one of these languages will likely save you a
+lot of time in the long run.</p>
+<section>
+  <h2>Defining arrays.</h2>
+  <pre class="line-numbers language-markup">
     <code class="language-matlab">
       % You will find it useful to store your data in arrays and matrices. This
       % will allow you to compute values, etc, and save you a lot of time. Matlab
@@ -24,8 +30,13 @@
 
       % Define a cell containing strings.
       c = {'seven', 'nine', 'twelve', 'five', 'two', 'thirteen', 'nine'};
-
-
+     </code>
+   </pre>
+</section>
+<section>
+  <h2>For loops.</h2>
+  <pre class="line-numbers language-markup">
+    <code class="language-matlab">
       %% For-loop examples
 
       % Go through the values defined in a for loop and print the values to the
@@ -44,7 +55,13 @@
       for j = 1 : length(c)
           disp(c{j});
       end
-
+    </code>
+  </pre>
+</section>
+<section>
+ <h2>While loops.</h2>
+ <pre class="line-numbers language-markup">
+   <code class="language-matlab">
       %% While-loop examples
       done = false;
       count = 0;
@@ -55,7 +72,13 @@
               done = true;
           end
       end
-
+    </code>
+  </pre>
+</section>
+<section>
+ <h2>If-then-else statements.</h2>
+ <pre class="line-numbers language-markup">
+   <code class="language-matlab">
       %% If-then-else statement examples
 
       % Let's loop through all of the values in the numerical array and display
@@ -80,7 +103,13 @@
               disp(['I found ',c{j},'!']);
           end
       end
-
+    </code>
+  </pre>
+</section>
+<section>
+ <h2>switch-case-otherwise statements.</h2>
+ <pre class="line-numbers language-markup">
+   <code class="language-matlab">
       %% switch-case-otherwise statement examples
 
       % Let's loop through all of the values in the numerical array and display
@@ -107,7 +136,13 @@
                   disp(['I found ',c{j},'!']);
           end
       end
-
+    </code>
+  </pre>
+</section>
+<section>
+ <h2>Searching for values in an array.</h2>
+ <pre class="line-numbers language-markup">
+   <code class="language-matlab">
       %% Searching for values in an array.
 
       % Now, let's search for specific values in our array. I'll show you two
