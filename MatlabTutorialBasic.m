@@ -1,0 +1,126 @@
+
+% You will find it useful to store your data in arrays and matrices. This
+% will allow you to compute values, etc, and save you a lot of time. Matlab
+% and Python are powerful tools for working with arrays and matrices.
+% Gaining proficiency with one of these languages will likely save you a
+% lot of time in the long run.
+
+% Define a numerical vector
+x = [7, 9, 12, 5, 2, 13, 9];
+
+% Define a cell containing strings.
+c = {'seven', 'nine', 'twelve', 'five', 'two', 'thirteen', 'nine'};
+
+
+%% For-loop examples
+
+% Go through the values defined in a for loop and print the values to the
+% command line.
+for j = 1 : 10
+    disp(j);
+end
+
+% Let's loop through all of the values in the numerical array and display
+% what we've found to the command line.
+for j = 1 : length(x)
+    disp(x(j));
+end
+
+% Now, let's do the same for the cell containing our strings.
+for j = 1 : length(c)
+    disp(c{j});
+end
+
+%% While-loop examples
+done = false;
+count = 0;
+while ~done
+    count = count + 1;
+    disp(x(count));
+    if count >= length(x)
+        done = true;
+    end
+end
+
+%% If-then-else statement examples
+
+% Let's loop through all of the values in the numerical array and display
+% what we've found to the command line.
+for j = 1 : length(x)
+    if (x(j) == 5)
+        disp('I found 5!');
+    elseif (x(j) == 7)
+        disp('I found 7!');
+    else
+        disp(['I found ',num2str(x(j)),'!']);
+    end
+end
+
+% Now, let's do the same for the cell containing our strings.
+for j = 1 : length(c)
+    if strcmp(c{j}, 'five')
+        disp('I found five!');
+    elseif strcmp(c{j}, 'seven')
+        disp('I found seven!');
+    else
+        disp(['I found ',c{j},'!']);
+    end
+end
+
+%% switch-case-otherwise statement examples
+
+% Let's loop through all of the values in the numerical array and display
+% what we've found to the command line.
+for j = 1 : length(x)
+    switch x(j)
+        case 5
+            disp('I found 5!');
+        case 7
+            disp('I found 7!');
+        otherwise
+            disp(['I found ',num2str(x(j)),'!']);
+    end
+end
+
+% Now, let's do the same for the cell containing our strings.
+for j = 1 : length(c)
+    switch c{j}
+        case 'five'
+            disp('I found five!');
+        case 'seven'
+            disp('I found seven!');
+        otherwise
+            disp(['I found ',c{j},'!']);
+    end
+end
+
+%% Searching for values in an array.
+
+% Now, let's search for specific values in our array. I'll show you two
+% ways of doing this.
+
+% 1) Logical indices. This technique returns a true/1 if the index in the
+% array matches the desired value and false/0 for all other indices.
+
+tf = (x == 9); % For the numerical array; find values equal to 9
+tf2 = (x >= 7); % Find all of the values greater than or equal to 7.
+
+% Now for the cell containing strings: strcmp
+tf3 = strcmp(c, 'nine');
+% If you want to find matches while ignoring upper/lower case: strcmpi
+tf4 = strcmpi(c, 'Nine');
+
+% 2) The second way is to search for the index numbers in the array that
+% contain the desired values. If the value isn't there, it will return
+% empty.
+tf5 = find(x == 9);
+
+tf6 = find(strcmpi(c, 'nine'));
+
+
+
+
+
+
+
+

@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" href="themes/style.css" />
+  <link rel="stylesheet" href="themes/prism.css" />
+</head>
+<body>
+  <!--<script src="https://myCDN.com/prism@v1.x/components/prism-core.min.js"></script>
+	<script src="https://myCDN.com/prism@v1.x/plugins/autoloader/prism-autoloader.min.js"></script>
+  -->
+
+  <h1>Programming Basics: Python</h1>
+  <p>You will find it useful to store your data in arrays and matrices. This
+will allow you to compute values, etc, and save you a lot of time. Matlab
+and Python are powerful tools for working with arrays and matrices.
+Gaining proficiency with one of these languages will likely save you a
+lot of time in the long run.</p>
+<section>
+  <h2>Defining arrays.</h2>
+  <pre class="line-numbers language-markup">
+    <code class="language-python">
+      # Define a numerical array
+      x = [7, 9, 12, 5, 2, 13, 9];
+
+      # Define an array containing strings.
+      c = ['seven', 'nine', 'twelve', 'five', 'two', 'thirteen', 'nine'];
+     </code>
+   </pre>
+</section>
+<section>
+  <h2>For loops.</h2>
+  <pre class="line-numbers language-markup">
+    <code class="language-python">
+      ## For-loop examples
+
+      # Go through the values defined in a for loop and print the values to the
+      # command line.
+      for j in range(0, 10):
+          print(j)
+
+      # Let's loop through all of the values in the numerical array and display
+      # what we've found to the command line.
+      for value in x:
+          print(value)
+
+      # Now, let's do the same for the cell containing our strings.
+      for value in c:
+          print(value)
+    </code>
+  </pre>
+</section>
+<section>
+ <h2>While loops.</h2>
+ <pre class="line-numbers language-markup">
+   <code class="language-python">
+     ## While-loop examples.
+     done = False;
+     count = 0;
+     while count < len(x):
+         print(x[count])
+         count += 1;
+    </code>
+  </pre>
+</section>
+<section>
+ <h2>If-then-else statements.</h2>
+ <pre class="line-numbers language-markup">
+   <code class="language-python">
+     ## If-then-else statement examples
+
+     # Let's loop through all of the values in the numerical array and display
+     # what we've found to the command line.
+     for j in range(0, len(x)):
+         if (x[j] == 5):
+             print("I found 5!")
+         elif (x[j] == 7):
+             print("I found 7!")
+         else:
+             print("I found %d!" % x[j])
+
+     # Now, let's do the same for the cell containing our strings.
+     for j in range(0, len(c)):
+         if (c[j] == "five"):
+             print("I found five!")
+         elif (c[j] == "seven"):
+             print("I found seven!")
+         else:
+             print("I found %s!" % c[j])
+    </code>
+  </pre>
+</section>
+
+<section>
+ <h2>Searching for values in an array.</h2>
+ <pre class="line-numbers language-markup">
+   <code class="language-python">
+     ## Searching for values in an array.
+
+     # Search for the index numbers in the array that contain the desired
+     # values. If the value isn't there, it will return empty.
+     # For the numerical array; find values equal to 9.
+     tf = [i for i in range(len(x)) if x[i] == 9]
+     print tf
+
+     # Find all of the values greater than or equal to 7.
+     tf2 = [i for i in range(len(x)) if x[i] >= 7]
+     print tf2
+
+     tf3 = [i for i in range(len(c)) if c[i] == "nine"]
+     print tf3
+    </code>
+  </pre>
+  </section>
+
+  <script src="themes/prism.js"></script>
+</body>
+</html>

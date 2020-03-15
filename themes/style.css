@@ -5,10 +5,9 @@ body {
   margin-bottom: 100px;
   margin-right: 150px;
   margin-left: 100px;
+  line-height: 1.5;
 }
-p {
 
-}
 h1 {
   font-size: 40px;
 }
@@ -21,4 +20,5 @@ p {
   font-family: "Georgia";
   font-size: 24px;
   padding: 1em;
+  text-indent: 2em;
 }
